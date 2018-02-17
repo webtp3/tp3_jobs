@@ -13,10 +13,10 @@ plugin.tx_tp3jobs_offers {
     #recursive = 1
   }
   features {
-    #skipDefaultArguments = 1
+    skipDefaultArguments = 1
   }
   mvc {
-    #callDefaultActionIfActionCantBeResolved = 1
+    callDefaultActionIfActionCantBeResolved = 1
   }
 }
 

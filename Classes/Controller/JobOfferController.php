@@ -8,7 +8,7 @@ namespace Tp3\Tp3Jobs\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2018 Thomas Ruta &lt;email@thomasruta.de>, tp3
+ *  (c) 2018 Thomas Ruta <email@thomasruta.de>, tp3
  *
  ***/
 

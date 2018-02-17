@@ -1,5 +1,5 @@
-&lt;html =&quot;http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers&quot; data-namespace-typo3-fluid=&quot;true&quot;>
-&lt;f:layout name=&quot;Default&quot; />
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
 
 This Template is responsible for displaying a single view for a domain object
 
@@ -12,12 +12,12 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-&lt;f:section name=&quot;main&quot;>
+<f:section name="main">
 <h1>Single View for JobOffer</h1>
 
-&lt;f:flashMessages />
-&lt;f:render partial=&quot;JobOffer/Properties&quot; arguments=&quot;{jobOffer:jobOffer}&quot; />
-&lt;f:link.action action=&quot;list&quot;>Back to list<br />
-&lt;f:link.action action=&quot;new&quot;>New JobOffer
+<f:flashMessages />
+<f:render partial="JobOffer/Properties" arguments="{jobOffer:jobOffer}" />
+<f:link.action action="list">Back to list<br />
+<f:link.action action="new">New JobOffer
 
-&lt;/html>
+</html>
