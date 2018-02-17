@@ -1,0 +1,53 @@
+&lt;html =&quot;http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers&quot; data-namespace-typo3-fluid=&quot;true&quot;>
+&lt;f:layout name=&quot;Default&quot; />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+&lt;f:section name=&quot;main&quot;>
+<h1>Listing for JobOffer</h1>
+
+&lt;f:flashMessages />
+
+<table  class="tx_tp3jobs" >
+	&lt;tr>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.title&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.descr&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.tasks&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.qualification&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.refid&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.contactname&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.contactaddress&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.contacttel&quot; />&lt;/th>
+		&lt;th>&lt;f:translate key=&quot;tx_tp3jobs_domain_model_joboffer.contactmail&quot; />&lt;/th>
+		&lt;th> &lt;/th>
+		&lt;th> &lt;/th>
+	&lt;/tr>
+
+	&lt;f:for each=&quot;{jobOffers}&quot; as=&quot;jobOffer&quot;>
+		&lt;tr>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.title}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.descr}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.tasks}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.qualification}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.refid}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.contactname}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.contactaddress}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.contacttel}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;show&quot; arguments=&quot;{jobOffer : jobOffer}&quot;> {jobOffer.contactmail}&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;edit&quot; arguments=&quot;{jobOffer : jobOffer}&quot;>Edit&lt;/td>
+			&lt;td>&lt;f:link.action action=&quot;delete&quot; arguments=&quot;{jobOffer : jobOffer}&quot;>Delete&lt;/td>
+		&lt;/tr>
+</table>
+
+&lt;f:link.action action=&quot;new&quot;>New JobOffer
+
+&lt;/html>
