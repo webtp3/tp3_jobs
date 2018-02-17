@@ -27,7 +27,7 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         public function findOffers()
         {
             $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-            $querySettings->setRespectStoragePage(true);
+            $querySettings->setRespectStoragePage(false);
             //$querySettings->setStoragePageIds(array($customStoragePid));
             $this->setDefaultQuerySettings($querySettings);
             //$queryResult = $this->findAll();

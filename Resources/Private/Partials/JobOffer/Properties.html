@@ -1,15 +1,118 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-tp3_jobs" >
-	<f:render partial="JobOffer/Item" arguments="{item}" />
-	<f:debug>{_all}</f:debug>
+<div itemscope itemtype="http://schema.org/JobPosting">
+	<meta itemprop="specialCommitments" content="VeteranCommit" />
+	<h2 itemprop="title">{jobOffer.title}</h2>
+	<span>
+    <p><strong>Location:</strong> <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="addressLocality">{jobOffer.contactaddress}</span> </span></span></p>
+  </span>
 
+	<div class="description" itemprop="description">
+		{jobOffer.descr}
+	</div>
+	<div class="responsibilities" itemprop="responsibilities">
+		{jobOffer.tasks}
+	</div>
+	<div class="qualifications" itemprop="educationRequirements">
+		{jobOffer.qualification}
+	</div>
+	{jobOffer.contactname}
+	{jobOffer.contactaddress}
+	{jobOffer.contacttel}
+	{jobOffer.contactmail}
+	<span itemprop="datePosted">2011-10-31</span>
+</div>
+<!--
+<table class="tx-tp3_jobs" >
 	<tr>
 		<td>
-			<f:translate key="tx_tp3jobs_domain_model_joboffer.{item.name}" />
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.title" />
 		</td>
 		<td>
-			{item}
+			{jobOffer.title}
 		</td>
+
 	</tr>
-</table>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.descr" />
+		</td>
+		<td>
+			{jobOffer.descr}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.tasks" />
+		</td>
+		<td>
+			{jobOffer.tasks}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.qualification" />
+		</td>
+		<td>
+			{jobOffer.qualification}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.refid" />
+		</td>
+		<td>
+			{jobOffer.refid}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.contactname" />
+		</td>
+		<td>
+			{jobOffer.contactname}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.contactname" />
+		</td>
+		<td>
+			{jobOffer.contactname}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.contactaddress" />
+		</td>
+		<td>
+			{jobOffer.contactaddress}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_joboffer.contactmail" />
+		</td>
+		<td>
+			{jobOffer.contactmail}
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+		</td>
+		<td>
+			{jobOffer.contacttel}
+		</td>
+
+	</tr>
+</table>-->
 </html>
+

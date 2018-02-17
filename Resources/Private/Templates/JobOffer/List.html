@@ -30,9 +30,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 	<f:for each="{jobOffers}" as="jobOffer">
 		<tr>
-			<td><f:link.action action="show" arguments="{JobOffer : jobOffer}"> {jobOffer.title}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{JobOffer:jobOffer}"> {jobOffer.title}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{jobid : jobOffer.uid}"> {jobOffer.descr}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{JobOffer}"> {jobOffer.refid}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{jobOffer:jobOffer}"> {jobOffer.refid}</f:link.action></td>
 			<!--<td><f:link.action action="edit" arguments="{jobOffer : jobOffer}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{jobOffer : jobOffer}">Delete</f:link.action></td>-->
 		</tr>

@@ -22,6 +22,14 @@ use TYPO3\CMS\Core\Page\PageRenderer;
 class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * Contains the settings of the current extension
+     *
+     * @var array
+     * @api
+     */
+    protected $settings;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
      *
      */

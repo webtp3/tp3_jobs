@@ -126,26 +126,46 @@ return [
 			    'eval' => 'trim'
 			]
 	    ],
-	    'tasks' => [
-	        'exclude' => true,
-	        'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.tasks',
-	        'config' => [
-			    'type' => 'text',
-			    'cols' => 40,
-			    'rows' => 15,
-			    'eval' => 'trim'
-			]
-	    ],
-	    'qualification' => [
-	        'exclude' => true,
-	        'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.qualification',
-	        'config' => [
-			    'type' => 'text',
-			    'cols' => 40,
-			    'rows' => 15,
-			    'eval' => 'trim'
-			]
-	    ],
+        'tasks' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.tasks',
+            'config' => array(
+                'type' => 'text',
+                'cols' => '30',
+                'rows' => '5',
+                'wizards' => array(
+                    '_PADDING' => 2,
+                    'RTE' => array(
+                        'notNewRecords' => 1,
+                        'RTEonly'       => 1,
+                        'type'          => 'script',
+                        'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+                        'icon'          => 'wizard_rte2.gif',
+                        'script'        => 'wizard_rte.php',
+                    ),
+                ),
+            )
+        ),
+        'qualification' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.qualification',
+            'config' => array(
+                'type' => 'text',
+                'cols' => '30',
+                'rows' => '5',
+                'wizards' => array(
+                    '_PADDING' => 2,
+                    'RTE' => array(
+                        'notNewRecords' => 1,
+                        'RTEonly'       => 1,
+                        'type'          => 'script',
+                        'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+                        'icon'          => 'wizard_rte2.gif',
+                        'script'        => 'wizard_rte.php',
+                    ),
+                ),
+            )
+        ),
 	    'refid' => [
 	        'exclude' => true,
 	        'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.refid',
