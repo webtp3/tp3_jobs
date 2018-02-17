@@ -41,6 +41,6 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
                 )
             );
             //$query->setOrderings($this->orderByField('uid', $uidArray));
-            return $query->execute(true);
+            return $query->execute();
         }
 }

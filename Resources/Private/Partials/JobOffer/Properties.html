@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-tp3_jobs" >
+	<f:render partial="JobOffer/Item" arguments="{item}" />
+	<f:debug>{_all}</f:debug>
+
+	<tr>
+		<td>
+			<f:translate key="tx_tp3jobs_domain_model_ratingsdata.{item.name}" />
+		</td>
+		<td>
+			{item}
+		</td>
+	</tr>
+</table>
+</html>
