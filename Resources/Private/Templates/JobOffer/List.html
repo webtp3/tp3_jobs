@@ -14,6 +14,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 <h1>Listing for JobOffer</h1>
+	<f:debug>{_all}</f:debug>
 
 <f:flashMessages />
 
@@ -46,8 +47,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><f:link.action action="edit" arguments="{jobOffer : jobOffer}">Edit</td>
 			<td><f:link.action action="delete" arguments="{jobOffer : jobOffer}">Delete</td>
 		</tr>
+	</f:for>
 </table>
 
-<f:link.action action="new">New JobOffer
-
+	<f:link.action action="new">New JobOffer</f:link.action>
+</f:section>
 </html>

@@ -9,11 +9,11 @@ call_user_func(
             'Tp3.Tp3Jobs',
             'Offers',
             [
-                'JobOffer' => 'list, show, new, create, edit, update, delete'
+                'JobOffer' => 'list, show'
             ],
             // non-cacheable actions
             [
-                'JobOffer' => 'create, update, delete'
+              //  'JobOffer' => 'create, update, delete'
             ]
         );
 

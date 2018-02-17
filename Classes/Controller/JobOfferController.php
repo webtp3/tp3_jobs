@@ -32,7 +32,8 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function listAction()
     {
-        $jobOffers = $this->jobOfferRepository->findAll();
+        $jobOffers = $this->jobOfferRepository->findOffers();
+      //  var_dump($jobOffers->first());
         $this->view->assign('jobOffers', $jobOffers);
     }
 
