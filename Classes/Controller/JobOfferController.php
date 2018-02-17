@@ -15,6 +15,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Core\Page\PageRenderer;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 /**
  * JobOfferController
@@ -30,11 +31,15 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     protected $settings;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
+     * @var \TYPO3\CMS\Extbase\Persistence\PersistenceManagerInterface
+     */
+    protected $persistenceManager;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
      *
      */
-
-    protected $persistenceManager;
+    protected $configurationManager;
 
 
     /**
@@ -127,7 +132,7 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function listAction()
     {
-        $jobOffers = $this->jobOfferRepository->findOffers();
+        $jobOffers = $this->jobOfferRepository->findOffers($this->settings["storagePid"] > 0  ? $this->settings["storagePid"] :  $GLOBALS["TSFE"]->page["uid"] );
       //  var_dump($jobOffers->first());
         $this->view->assign('jobOffers', $jobOffers);
     }

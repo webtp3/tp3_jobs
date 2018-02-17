@@ -3,24 +3,30 @@
 	<meta itemprop="specialCommitments" content="VeteranCommit" />
 	<h2 itemprop="title">{jobOffer.title}</h2>
 	<span>
-    <p><strong>Location:</strong> <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <p><span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
     <span itemprop="addressLocality">{jobOffer.contactaddress}</span> </span></span></p>
   </span>
 
 	<div class="description" itemprop="description">
-		{jobOffer.descr}
+		<f:format.html>	{jobOffer.descr}</f:format.html>
+
 	</div>
 	<div class="responsibilities" itemprop="responsibilities">
-		{jobOffer.tasks}
+		<f:format.html>	{jobOffer.tasks}</f:format.html>
+
 	</div>
-	<div class="qualifications" itemprop="educationRequirements">
-		{jobOffer.qualification}
+	<div class="qualifications" itemprop="qualifications">
+		<f:format.html>	{jobOffer.qualification}</f:format.html>
+
 	</div>
-	{jobOffer.contactname}
-	{jobOffer.contactaddress}
-	{jobOffer.contacttel}
-	{jobOffer.contactmail}
-	<span itemprop="datePosted">2011-10-31</span>
+	<div class="job_contact" >
+		<p class="postal"><b>{jobOffer.contactname}</b><br>
+		{jobOffer.contactaddress}</p>
+		<p class="telecom"><span class="tel">{jobOffer.contacttel}</span><br>
+			<span class="email"> {jobOffer.contactmail}</span></p>
+	</div>
+	<span itemprop="datePosted">{jobOffer.date}</span><br>
+	<span itemprop="identifier">{jobOffer.refid}</span>
 </div>
 <!--
 <table class="tx-tp3_jobs" >

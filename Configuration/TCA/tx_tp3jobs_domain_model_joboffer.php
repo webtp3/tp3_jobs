@@ -134,14 +134,15 @@ return [
                 'cols' => '30',
                 'rows' => '5',
                 'wizards' => array(
-                    '_PADDING' => 2,
                     'RTE' => array(
                         'notNewRecords' => 1,
-                        'RTEonly'       => 1,
-                        'type'          => 'script',
-                        'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
-                        'icon'          => 'wizard_rte2.gif',
-                        'script'        => 'wizard_rte.php',
+                        'RTEonly' => 1,
+                        'type' => 'script',
+                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.W.RTE',
+                        'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_rte.gif',
+                        'module' => array(
+                            'name' => 'wizard_rte'
+                        )
                     ),
                 ),
             )
@@ -154,14 +155,15 @@ return [
                 'cols' => '30',
                 'rows' => '5',
                 'wizards' => array(
-                    '_PADDING' => 2,
                     'RTE' => array(
                         'notNewRecords' => 1,
-                        'RTEonly'       => 1,
-                        'type'          => 'script',
-                        'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
-                        'icon'          => 'wizard_rte2.gif',
-                        'script'        => 'wizard_rte.php',
+                        'RTEonly' => 1,
+                        'type' => 'script',
+                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.W.RTE',
+                        'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_rte.gif',
+                        'module' => array(
+                            'name' => 'wizard_rte'
+                        )
                     ),
                 ),
             )

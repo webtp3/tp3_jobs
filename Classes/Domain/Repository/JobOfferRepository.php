@@ -24,11 +24,11 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     * @return QueryResultInterface|array
     *
     */
-        public function findOffers()
+        public function findOffers($pid = [2038])
         {
             $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-            $querySettings->setRespectStoragePage(false);
-            //$querySettings->setStoragePageIds(array($customStoragePid));
+            $querySettings->setRespectStoragePage(true);
+            $querySettings->setStoragePageIds(array($pid));
             $this->setDefaultQuerySettings($querySettings);
             //$queryResult = $this->findAll();
             //return $queryResult;*/
@@ -53,7 +53,7 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findJob($uid)
     {
         $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-        $querySettings->setRespectStoragePage(false);
+        $querySettings->setRespectStoragePage(true);
         //$querySettings->setStoragePageIds(array($customStoragePid));
         $this->setDefaultQuerySettings($querySettings);
         //$queryResult = $this->findAll();
