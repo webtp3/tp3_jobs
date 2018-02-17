@@ -22,30 +22,19 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<tr>
 		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.title" /></th>
 		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.descr" /></th>
-		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.tasks" /></th>
-		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.qualification" /></th>
 		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.refid" /></th>
-		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.contactname" /></th>
-		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.contactaddress" /></th>
-		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.contacttel" /></th>
-		<th><f:translate key="tx_tp3jobs_domain_model_joboffer.contactmail" /></th>
+
 		<th> </th>
 		<th> </th>
 	</tr>
 
 	<f:for each="{jobOffers}" as="jobOffer">
 		<tr>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.title}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.descr}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.tasks}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.qualification}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.refid}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.contactname}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.contactaddress}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.contacttel}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{jobOffer : jobOffer}"> {jobOffer.contactmail}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{jobOffer : jobOffer}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{jobOffer : jobOffer}">Delete</f:link.action></td>
+			<td><f:link.action action="show" arguments="{JobOffer : jobOffer}"> {jobOffer.title}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{jobid : jobOffer.uid}"> {jobOffer.descr}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{JobOffer}"> {jobOffer.refid}</f:link.action></td>
+			<!--<td><f:link.action action="edit" arguments="{jobOffer : jobOffer}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{jobOffer : jobOffer}">Delete</f:link.action></td>-->
 		</tr>
 	</f:for>
 </table>

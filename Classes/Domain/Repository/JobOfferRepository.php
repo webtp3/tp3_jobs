@@ -27,7 +27,7 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         public function findOffers()
         {
             $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-            $querySettings->setRespectStoragePage(false);
+            $querySettings->setRespectStoragePage(true);
             //$querySettings->setStoragePageIds(array($customStoragePid));
             $this->setDefaultQuerySettings($querySettings);
             //$queryResult = $this->findAll();
@@ -43,4 +43,30 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             //$query->setOrderings($this->orderByField('uid', $uidArray));
             return $query->execute();
         }
+    /***
+     * Returns the job of the repository.
+     *
+     * @param $uid
+     * @return QueryResultInterface|array
+     *
+     */
+    public function findJob($uid)
+    {
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings->setRespectStoragePage(false);
+        //$querySettings->setStoragePageIds(array($customStoragePid));
+        $this->setDefaultQuerySettings($querySettings);
+        //$queryResult = $this->findAll();
+        //return $queryResult;*/
+        $query = $this->createQuery();
+        $query->matching(
+        $query->equals('uid',(int) $uid),
+            $query->logicalAnd(
+                $query->equals('hidden', 0),
+                $query->equals('deleted', 0)
+            )
+        );
+        //$query->setOrderings($this->orderByField('uid', $uidArray));
+        return $query->execute();
+    }
 }

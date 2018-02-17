@@ -10,6 +10,6 @@ plugin.tx_tp3jobs_offers {
   }
   persistence {
     # cat=plugin.tx_tp3jobs_offers//a; type=string; label=Default storage PID
-    storagePid =
+    storagePid = 2038
   }
 }
