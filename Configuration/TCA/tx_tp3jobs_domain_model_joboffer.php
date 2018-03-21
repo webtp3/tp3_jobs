@@ -5,7 +5,6 @@ return [
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'label_alt' => 'list_type',
         'cruser_id' => 'cruser_id',
 		'versioningWS' => true,
         'languageField' => 'sys_language_uid',
@@ -128,62 +127,38 @@ return [
 	    'descr' => [
 	        'exclude' => true,
 	        'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.descr',
-	        'config' => [
-			    'type' => 'text',
-			    'cols' => 40,
-			    'rows' => 15,
-			    'eval' => 'trim'
-			]
+            'config' => [
+                'type' => 'text',
+                'cols' => '80',
+                'rows' => '15',
+                'softref' => 'typolink_tag,images,email[subst],url',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ],
 	    ],
         'tasks' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.tasks',
-            'config' => array(
+            'config' => [
                 'type' => 'text',
-                'cols' => '30',
-                'rows' => '5',
-                'wizards' => array(
-                    'RTE' => array(
-                        'notNewRecords' => 1,
-                        'RTEonly' => 1,
-                        'type' => 'script',
-                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
-                        'icon' => 'actions-wizard-rte',
-                        'module' => array(
-                            'name' => 'wizard_rich_text_editor',
-                            'urlParameters' => array(
-                                'mode' => 'wizard',
-                                'act' => 'wizard_rte.php'
-                            )
-                        ),
-                    ),
-                ),
-            )
+                'cols' => '80',
+                'rows' => '15',
+                'softref' => 'typolink_tag,images,email[subst],url',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ],
         ),
         'qualification' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.qualification',
-            'config' => array(
+            'config' => [
                 'type' => 'text',
-                'cols' => '30',
-                'rows' => '5',
-                'wizards' => array(
-                    'RTE' => array(
-                        'notNewRecords' => 1,
-                        'RTEonly' => 1,
-                        'type' => 'script',
-                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
-                        'icon' => 'actions-wizard-rte',
-                        'module' => array(
-                            'name' => 'wizard_rich_text_editor',
-                            'urlParameters' => array(
-                                'mode' => 'wizard',
-                                'act' => 'wizard_rte.php'
-                            )
-                        ),
-                    ),
-                ),
-            )
+                'cols' => '80',
+                'rows' => '15',
+                'softref' => 'typolink_tag,images,email[subst],url',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ],
         ),
 	    'refid' => [
 	        'exclude' => true,
