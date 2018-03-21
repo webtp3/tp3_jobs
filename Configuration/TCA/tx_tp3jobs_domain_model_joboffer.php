@@ -5,6 +5,7 @@ return [
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
+        'label_alt' => 'list_type',
         'cruser_id' => 'cruser_id',
 		'versioningWS' => true,
         'languageField' => 'sys_language_uid',
@@ -16,8 +17,11 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
+        'iconfile' => 'EXT:tp3_jobs/Resources/Public/Icons/user_plugin_offers.svg',
+        'typeicon_classes' => [
+            'default' => 'ext-tp3_jobs-wizard-icon'
+        ],
 		'searchFields' => 'title,descr,tasks,qualification,refid,contactname,contactaddress,contacttel,contactmail',
-        'iconfile' => 'EXT:tp3_jobs/Resources/Public/Icons/tx_tp3jobs_domain_model_joboffer.gif'
     ],
     'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, descr, tasks, qualification, refid, contactname, contactaddress, contacttel, contactmail',
@@ -84,24 +88,29 @@ return [
         ],
 		'starttime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
                 'size' => 13,
                 'eval' => 'datetime',
+                'renderType' => 'inputDateTime',
                 'default' => 0,
-            ]
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],            ]
         ],
         'endtime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
                 'size' => 13,
                 'eval' => 'datetime',
+                'renderType' => 'inputDateTime',
                 'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038)
                 ]
@@ -138,11 +147,15 @@ return [
                         'notNewRecords' => 1,
                         'RTEonly' => 1,
                         'type' => 'script',
-                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.W.RTE',
-                        'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_rte.gif',
+                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+                        'icon' => 'actions-wizard-rte',
                         'module' => array(
-                            'name' => 'wizard_rte'
-                        )
+                            'name' => 'wizard_rich_text_editor',
+                            'urlParameters' => array(
+                                'mode' => 'wizard',
+                                'act' => 'wizard_rte.php'
+                            )
+                        ),
                     ),
                 ),
             )
@@ -159,11 +172,15 @@ return [
                         'notNewRecords' => 1,
                         'RTEonly' => 1,
                         'type' => 'script',
-                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.W.RTE',
-                        'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_rte.gif',
+                        'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+                        'icon' => 'actions-wizard-rte',
                         'module' => array(
-                            'name' => 'wizard_rte'
-                        )
+                            'name' => 'wizard_rich_text_editor',
+                            'urlParameters' => array(
+                                'mode' => 'wizard',
+                                'act' => 'wizard_rte.php'
+                            )
+                        ),
                     ),
                 ),
             )
@@ -213,5 +230,14 @@ return [
 			    'eval' => 'trim'
 			],
 	    ],
+        'tstamp' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.contactmail',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
     ],
 ];

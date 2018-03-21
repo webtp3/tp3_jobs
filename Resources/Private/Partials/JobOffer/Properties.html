@@ -1,6 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div itemscope itemtype="http://schema.org/JobPosting">
-	<meta itemprop="specialCommitments" content="VeteranCommit" />
 	<h2 itemprop="title">{jobOffer.title}</h2>
 	<span>
     <p><span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -25,7 +24,7 @@
 		<p class="telecom"><span class="tel">{jobOffer.contacttel}</span><br>
 			<span class="email"> {jobOffer.contactmail}</span></p>
 	</div>
-	<span itemprop="datePosted">{jobOffer.date}</span><br>
+	<span itemprop="datePosted"><f:format.date format="Y-m-d H:i:s">{jobOffer.date}</f:format.date></span><br>
 	<span itemprop="identifier">{jobOffer.refid}</span>
 </div>
 <!--

@@ -16,17 +16,36 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'fe',
     'author' => 'Thomas Ruta',
     'author_email' => 'email@thomasruta.de',
-    'state' => 'alpha',
+    'state' => 'beta',
     'internal' => '',
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '0.0.2',
-    'constraints' => [
-        'depends' => [
-            'typo3' => '7.6.0-8.9.99',
-        ],
-        'conflicts' => [],
-        'suggests' => [],
-    ],
+    'version' => '0.1.0',
+    'constraints' =>
+        array (
+            'depends' =>
+                array (
+                    'typo3' => '7.6.0-8.9.99',
+                ),
+            'conflicts' =>
+                array (
+                ),
+            'suggests' =>
+                array (
+                    'bootstrap_package' => '8.0.0-8.9.99',
+                    'tp3mods' => '*',
+                ),
+        ),
+    'autoload' =>
+        array (
+            'psr-4' =>
+                array (
+                    'Tp3\\Tp3Jobs\\' => 'Classes',
+                ),
+        ),
+    'clearcacheonload' => false,
+    'author_company' => 'tp3',
+
 ];
+

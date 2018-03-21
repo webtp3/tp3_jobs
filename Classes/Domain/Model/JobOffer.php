@@ -79,9 +79,35 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $contactmail = '';
+    /**
+     * date
+     *
+     * @var string
+     */
+    protected $date = '';
 
     /**
-     * Returns the title
+     * Returns the date
+     *
+     * @return string $date
+     */
+    public function getDate()
+    {
+        return $this->tstamp;
+    }
+
+    /**
+     * Sets the date
+     *
+     * @param string $date
+     * @return void
+     */
+    public function setDate($date)
+    {
+        $this->tstamp = $date;
+    }
+    /**
+     * Returns the date
      * 
      * @return string $title
      */
