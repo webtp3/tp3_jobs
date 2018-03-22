@@ -6,7 +6,7 @@ defined('TYPO3_MODE') || die();
     'JobOffers'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeCategorizable(
-    $_EXTKEY,
+    "tp3_jobs",
     'tx_tp3jobs_domain_model_joboffer'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_tp3jobs_domain_model_joboffer', 'EXT:tp3_jobs/Resources/Private/Language/locallang_csh_tx_tp3jobs_domain_model_joboffer.xlf');

@@ -18,7 +18,7 @@ Links
 	https://forge.typo3.org/projects/extension-<extension key>/issues
 
 :Git Repository:
-	https://github.com/<username>/<extension key>
+	https://github.com/webtp3/<extension key>
 
 :Contact:
-	`@<username> <https://twitter.com/your-username>`__
+	`@<thomasruta> <https://twitter.com/your-username>`__
