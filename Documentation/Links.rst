@@ -12,13 +12,13 @@ Links
 -----
 
 :TER:
-	https://typo3.org/extensions/repository/view/<extension key>
+	https://typo3.org/extensions/repository/view/tp3_jobs
 
 :Bug Tracker:
-	https://forge.typo3.org/projects/extension-<extension key>/issues
+	https://forge.typo3.org/projects/extension-tp3_jobs/issues
 
 :Git Repository:
-	https://github.com/webtp3/<extension key>
+	https://github.com/webtp3/tp3_jobs
 
 :Contact:
-	`@<thomasruta> <https://twitter.com/your-username>`__
+	@thomasruta https://twitter.com/thomasruta

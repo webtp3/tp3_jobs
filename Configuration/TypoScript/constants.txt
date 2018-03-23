@@ -13,8 +13,9 @@ plugin.tx_tp3jobs_offers {
     storagePid = 2038
   }
   settings{
-    debug = 1
-    storagePid = {$plugin.tx_tp3jobs_offers.persistence.storagePid}
+    # cat=plugin.tx_tp3jobs_offers//a; type=boolean; label=debug mode
+    debug = 0
+
 
   }
 }

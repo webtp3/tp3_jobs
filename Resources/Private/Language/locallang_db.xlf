@@ -39,6 +39,9 @@
 			<trans-unit id="tx_tp3jobs_domain_model_joboffer.contactmail">
 				<source>Contactmail</source>
 			</trans-unit>
+			<trans-unit id="tx_tp3jobs_offers.debug">
+                <source>DebugMode</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

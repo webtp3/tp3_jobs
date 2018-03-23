@@ -23,10 +23,10 @@ tp3 Jobs
 		en
 
 	:Description:
-		Joboffer on tp3
+		typo3 Joboffers on tp3 including microdata...
 
 	:Keywords:
-		comma,separated,list,of,keywords
+		joboffers, jobs, stellenanzeigen, carrier, offer, job
 
 	:Copyright:
 		2018
@@ -36,6 +36,10 @@ tp3 Jobs
 
 	:Email:
 		email@thomasruta.de
+
+    :Company:
+    	R&P IT Consulting
+        on web.tp3.de <https://web.tp3.de/>
 
 	:License:
 		This document is published under the Open Content License
@@ -58,7 +62,6 @@ tp3 Jobs
 	Administrator/Index
 	Configuration/Index
 	Developer/Index
-	KnownProblems/Index
 	ToDoList/Index
 	ChangeLog/Index
 	Links

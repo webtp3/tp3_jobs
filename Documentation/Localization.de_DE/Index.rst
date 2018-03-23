@@ -15,7 +15,7 @@
 .. only:: html
 
 	:Klassifikation:
-		extension_key
+		tp3_jobs
 
 	:Version:
 		|release|
@@ -24,19 +24,23 @@
 		de
 
 	:Beschreibung:
-		Geben Sie eine Beschreibung ein.
+		Stellenanzeigen auf typo3 Webseiten. Inclusive Rich Cards
 
 	:Schlüsselwörter:
-		komma-getrennte,Liste,von,Schlüsselwörtern
+        joboffers, job, stellenanzeigen, karriere
 
 	:Copyright:
-		###YEAR###
+    		2018
 
-	:Autor:
-		###AUTHOR###
+    :Author:
+        Thomas Ruta
 
-	:E-Mail:
-		author@example.com
+    :E-Mail:
+		email@thomasruta.de
+
+    :Unternehmen:
+        R&P IT Consulting
+        auf web.tp3.de <https://web.tp3.de/>
 
 	:Lizenz:
 		Dieses Dokument wird unter der Open Publication License, siehe
@@ -60,6 +64,7 @@
 ..	AdministratorManual/Index
 ..	Configuration/Index
 ..	DeveloperCorner/Index
-..	KnownProblems/Index
 ..	ToDoList/Index
 ..	ChangeLog/Index
+.. 	Links
+
