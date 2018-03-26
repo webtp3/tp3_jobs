@@ -15,8 +15,8 @@ conf.py:
   latex_documents:
   - - Index
     - tp3_jobs.tex
-    - Extension Name (Deutsch)
-    - Your Name
+    - tp3 Jobs
+    - Thomas Ruta
     - manual
   latex_elements:
     papersize: a4paper
@@ -26,8 +26,8 @@ conf.py:
     github_repository: https://github.com/webtp3/tp3_jobs
     github_branch: latest
   intersphinx_mapping:
-      t3tsref:
-      - http://docs.typo3.org/typo3cms/TyposcriptReference/
-      - null
+    t3tsref:
+    - http://docs.typo3.org/typo3cms/TyposcriptReference/
+    - null
 
 ...

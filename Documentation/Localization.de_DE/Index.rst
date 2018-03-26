@@ -3,13 +3,13 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: Includes.txt
 
 
 .. _start:
 
 =============================================================
-###PROJECT_NAME### (Deutsch)
+tp3 Jobs (Deutsch)
 =============================================================
 
 .. only:: html
@@ -40,7 +40,7 @@
 
     :Unternehmen:
         R&P IT Consulting
-        auf web.tp3.de <https://web.tp3.de/>
+        auf web.tp3.de `<https://web.tp3.de/>`__.
 
 	:Lizenz:
 		Dieses Dokument wird unter der Open Publication License, siehe
@@ -59,12 +59,12 @@
 	:maxdepth: 3
 	:titlesonly:
 
-..	Introduction/Index
-..	UserManual/Index
-..	AdministratorManual/Index
-..	Configuration/Index
-..	DeveloperCorner/Index
-..	ToDoList/Index
-..	ChangeLog/Index
-.. 	Links
+    ./Localization.de_DE/Introduction/Index
+    ./Localization.de_DE/UserManual/Index
+    ./Localization.de_DE/AdministratorManual/Index
+    ./Localization.de_DE/Configuration/Index
+    ./Localization.de_DE/DeveloperCorner/Index
+    ./Localization.de_DE/ToDoList/Index
+    ./Localization.de_DE/ChangeLog/Index
+    ./Localization.de_DE/Links
 

@@ -21,20 +21,22 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '0.1.4',
+    'version' => '0.1.5',
+    'author_company' => 'tp3',
     'constraints' =>
         array (
             'depends' =>
                 array (
-                    'typo3' => '7.6.0-8.9.99',
+                    'bootstrap_package' => '8.0.0-8.9.99',
+                    'rte_ckeditor' => '8.7.0-9.0.99',
+                    'typo3' => '8.7.0-9.0.99',
                 ),
             'conflicts' =>
                 array (
+
                 ),
             'suggests' =>
                 array (
-                    'bootstrap_package' => '8.0.0-8.9.99',
-                    'tp3mods' => '*',
                 ),
         ),
     'autoload' =>
@@ -44,8 +46,6 @@ $EM_CONF[$_EXTKEY] = [
                     'Tp3\\Tp3Jobs\\' => 'Classes',
                 ),
         ),
-    'clearcacheonload' => false,
-    'author_company' => 'tp3',
 
 ];
 

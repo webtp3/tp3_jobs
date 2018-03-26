@@ -21,5 +21,5 @@ Links
 	https://github.com/webtp3/tp3_jobs
 
 :Contact:
-	@thomasruta `<https://twitter.com/thomasruta>`__.
+    @thomasruta `<https://twitter.com/thomasruta>`__.
     email@thomasruta.de `<mailto:email@thomasruta.de>`__

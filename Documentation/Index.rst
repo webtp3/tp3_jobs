@@ -39,7 +39,7 @@ tp3 Jobs
 
     :Company:
     	R&P IT Consulting
-        on web.tp3.de <https://web.tp3.de/>
+        on web.tp3.de `<https://web.tp3.de/>`__.
 
 	:License:
 		This document is published under the Open Content License
