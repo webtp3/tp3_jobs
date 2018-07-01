@@ -24,14 +24,13 @@ https://extensions.typo3.org/extension/tp3_jobs/
 To install the extension, perform the following steps:
 
 #. Go to the Extension Manager
-#. You can add tp3mods to have the advantage of further microdata
+#. You cann add tp3mods to have the advantage of further microdata
 #. afterwards you should include the static template tp3_jobs or add the tssetup manualy
 
 For a list of configuration options, using a definition list is recommended:
 
 Some Configuration
-  not configure  the storage pid in the contentelemt
-  it should be configured thru constants in tssetup
+  configure the storage pid in the contentelemt
 
 Other configuration
   comming up is to select  a tt_address
