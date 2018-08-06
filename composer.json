@@ -1,5 +1,5 @@
 {
-    "name": "Tp3/Tp3Jobs",
+    "name": "web-tp3/tp3-jobs",
     "type": "typo3-cms-extension",
     "description" : "JobOffers & Postings with tp3",
     "license": "GPL-2.0+",
