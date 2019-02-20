@@ -1,4 +1,11 @@
 <?php
+
+/*
+ * This file is part of the web-tp3/tp3_jobs.
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Tp3\Tp3Jobs\Controller;
 
 /***
@@ -11,11 +18,6 @@ namespace Tp3\Tp3Jobs\Controller;
  *  (c) 2018 Thomas Ruta <email@thomasruta.de>, tp3
  *
  ***/
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-use TYPO3\CMS\Core\Page\PageRenderer;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 /**
  * JobOfferController
@@ -41,12 +43,10 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     protected $configurationManager;
 
-
     /**
      *
      * @var \TYPO3\CMS\Core\Page\PageRenderer
      */
-
     protected $pageRenderer;
 
     /**
@@ -54,8 +54,7 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      *
      * @var \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer
      */
-    protected  $cObjRenderer;
-
+    protected $cObjRenderer;
 
     /**
      * @var string
@@ -69,7 +68,7 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     /**
      * jobOfferRepository
-     * 
+     *
      * @var \Tp3\Tp3Jobs\Domain\Repository\JobOfferRepository
      * @inject
      */
@@ -82,15 +81,15 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @throws \Exception
      * @override \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
-    public function processRequest(\TYPO3\CMS\Extbase\Mvc\RequestInterface $request, \TYPO3\CMS\Extbase\Mvc\ResponseInterface $response) {
-        if (count($request->getArguments())> 0 &&  $request->hasArgument("jobid") && $request->getArgument("jobid") > 0   ) {
+    public function processRequest(\TYPO3\CMS\Extbase\Mvc\RequestInterface $request, \TYPO3\CMS\Extbase\Mvc\ResponseInterface $response)
+    {
+        if (count($request->getArguments())> 0 &&  $request->hasArgument('jobid') && $request->getArgument('jobid') > 0) {
             //&& $this->resolveActionMethodName() == "ratingAction"
-            $jobid = $request->getArgument("jobid");
+            $jobid = $request->getArgument('jobid');
         }
         try {
             parent::processRequest($request, $response);
-        }
-        catch(\TYPO3\CMS\Extbase\Property\Exception $e) {
+        } catch (\TYPO3\CMS\Extbase\Property\Exception $e) {
             if ($e->getPrevious() instanceof \TYPO3\CMS\Extbase\Property\Exception\InvalidPropertyException) {
                 $GLOBALS['TSFE']->pageNotFoundAndExit('404');
             } else {
@@ -102,11 +101,11 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @return void
      * @override \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
-    protected function callActionMethod() {
+    protected function callActionMethod()
+    {
         try {
             parent::callActionMethod();
-        }
-        catch(\Exception $exception) {
+        } catch (\Exception $exception) {
             // This enables you to trigger the call of TYPO3s page-not-found handler by throwing \TYPO3\CMS\Core\Error\Http\PageNotFoundException
             if ($exception instanceof \TYPO3\CMS\Core\Error\Http\PageNotFoundException) {
                 $GLOBALS['TSFE']->pageNotFoundAndExit($this->entityNotFoundMessage);
@@ -127,44 +126,44 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     }
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
     {
-        $jobOffers = $this->jobOfferRepository->findOffers($this->settings["storagePid"] > 0  ? $this->settings["storagePid"] :  $GLOBALS["TSFE"]->page["uid"] );
-      //  var_dump($jobOffers->first());
+        $jobOffers = $this->jobOfferRepository->findOffers($this->settings['storagePid'] > 0  ? $this->settings['storagePid'] :  $GLOBALS['TSFE']->page['uid']);
+        //  var_dump($jobOffers->first());
         $this->view->assign('jobOffers', $jobOffers);
     }
 
     /**
      * action show
-     * 
+     *
      * @param  \Tp3\Tp3Jobs\Domain\Model\JobOffer $jobOffer
      * @return void
      */
-    public function showAction( \Tp3\Tp3Jobs\Domain\Model\JobOffer $jobOffer)
+    public function showAction(\Tp3\Tp3Jobs\Domain\Model\JobOffer $jobOffer)
   //  public function showAction( $jobOffer)
     {
-        if(!$jobOffer instanceof \Tp3\Tp3Jobs\Domain\Model\JobOffer)
-        $jobOffer = $this->jobOfferRepository->findJob($jobOffer);
+        if (!$jobOffer instanceof \Tp3\Tp3Jobs\Domain\Model\JobOffer) {
+            $jobOffer = $this->jobOfferRepository->findJob($jobOffer);
+        }
 
         $this->view->assign('jobOffer', $jobOffer);
     }
 
     /**
      * action new
-     * 
+     *
      * @return void
      */
     public function newAction()
     {
-
     }
 
     /**
      * action create
-     * 
+     *
      * @param \Tp3\Tp3Jobs\Domain\Model\JobOffer $newJobOffer
      * @return void
      */
@@ -177,7 +176,7 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     /**
      * action edit
-     * 
+     *
      * @param \Tp3\Tp3Jobs\Domain\Model\JobOffer $jobOffer
      * @ignorevalidation $jobOffer
      * @return void
@@ -189,7 +188,7 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     /**
      * action update
-     * 
+     *
      * @param \Tp3\Tp3Jobs\Domain\Model\JobOffer $jobOffer
      * @return void
      */
@@ -202,7 +201,7 @@ class JobOfferController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     /**
      * action delete
-     * 
+     *
      * @param \Tp3\Tp3Jobs\Domain\Model\JobOffer $jobOffer
      * @return void
      */

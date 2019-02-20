@@ -1,10 +1,16 @@
 <?php
+
+/*
+ * This file is part of the web-tp3/tp3_jobs.
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Tp3\Tp3Jobs\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
  *
- * @author Thomas Ruta <email@thomasruta.de>
  */
 class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
@@ -33,7 +39,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getTitle()
         );
-
     }
 
     /**
@@ -48,7 +53,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'title',
             $this->subject
         );
-
     }
 
     /**
@@ -60,7 +64,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getDescr()
         );
-
     }
 
     /**
@@ -75,7 +78,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'descr',
             $this->subject
         );
-
     }
 
     /**
@@ -87,7 +89,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getTasks()
         );
-
     }
 
     /**
@@ -102,7 +103,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'tasks',
             $this->subject
         );
-
     }
 
     /**
@@ -114,7 +114,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getQualification()
         );
-
     }
 
     /**
@@ -129,7 +128,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'qualification',
             $this->subject
         );
-
     }
 
     /**
@@ -141,7 +139,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getRefid()
         );
-
     }
 
     /**
@@ -156,7 +153,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'refid',
             $this->subject
         );
-
     }
 
     /**
@@ -168,7 +164,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getContactname()
         );
-
     }
 
     /**
@@ -183,7 +178,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'contactname',
             $this->subject
         );
-
     }
 
     /**
@@ -195,7 +189,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getContactaddress()
         );
-
     }
 
     /**
@@ -210,7 +203,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'contactaddress',
             $this->subject
         );
-
     }
 
     /**
@@ -222,7 +214,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getContacttel()
         );
-
     }
 
     /**
@@ -237,7 +228,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'contacttel',
             $this->subject
         );
-
     }
 
     /**
@@ -249,7 +239,6 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             '',
             $this->subject->getContactmail()
         );
-
     }
 
     /**
@@ -264,6 +253,5 @@ class JobOfferTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             'contactmail',
             $this->subject
         );
-
     }
 }

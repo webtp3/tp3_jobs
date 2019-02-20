@@ -1,4 +1,11 @@
 <?php
+
+/*
+ * This file is part of the web-tp3/tp3_jobs.
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Tp3\Tp3Jobs\Domain\Repository;
 
 /***
@@ -24,25 +31,25 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     * @return QueryResultInterface|array
     *
     */
-        public function findOffers($pid = [2038])
-        {
-            $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-            $querySettings->setRespectStoragePage(true);
-            $querySettings->setStoragePageIds(array($pid));
-            $this->setDefaultQuerySettings($querySettings);
-            //$queryResult = $this->findAll();
-            //return $queryResult;*/
-            $query = $this->createQuery();
-            $query->matching(
+    public function findOffers($pid = [2038])
+    {
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings->setRespectStoragePage(true);
+        $querySettings->setStoragePageIds([$pid]);
+        $this->setDefaultQuerySettings($querySettings);
+        //$queryResult = $this->findAll();
+        //return $queryResult;*/
+        $query = $this->createQuery();
+        $query->matching(
                 //$query->equals('ref', $customStoragePid),
                 $query->logicalAnd(
                     $query->equals('hidden', 0),
                     $query->equals('deleted', 0)
                 )
             );
-            //$query->setOrderings($this->orderByField('uid', $uidArray));
-            return $query->execute();
-        }
+        //$query->setOrderings($this->orderByField('uid', $uidArray));
+        return $query->execute();
+    }
     /***
      * Returns the job of the repository.
      *
@@ -60,7 +67,7 @@ class JobOfferRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         //return $queryResult;*/
         $query = $this->createQuery();
         $query->matching(
-        $query->equals('uid',(int) $uid),
+            $query->equals('uid', (int) $uid),
             $query->logicalAnd(
                 $query->equals('hidden', 0),
                 $query->equals('deleted', 0)

@@ -1,4 +1,11 @@
 <?php
+
+/*
+ * This file is part of the web-tp3/tp3_jobs.
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Tp3\Tp3Jobs\Domain\Model;
 
 /***
@@ -19,63 +26,63 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * title
-     * 
+     *
      * @var string
      */
     protected $title = '';
 
     /**
      * descr
-     * 
+     *
      * @var string
      */
     protected $descr = '';
 
     /**
      * tasks
-     * 
+     *
      * @var string
      */
     protected $tasks = '';
 
     /**
      * qualification
-     * 
+     *
      * @var string
      */
     protected $qualification = '';
 
     /**
      * refid
-     * 
+     *
      * @var string
      */
     protected $refid = '';
 
     /**
      * contactname
-     * 
+     *
      * @var string
      */
     protected $contactname = '';
 
     /**
      * contactaddress
-     * 
+     *
      * @var string
      */
     protected $contactaddress = '';
 
     /**
      * contacttel
-     * 
+     *
      * @var string
      */
     protected $contacttel = '';
 
     /**
      * contactmail
-     * 
+     *
      * @var string
      */
     protected $contactmail = '';
@@ -108,7 +115,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     /**
      * Returns the date
-     * 
+     *
      * @return string $title
      */
     public function getTitle()
@@ -118,7 +125,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -129,7 +136,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the descr
-     * 
+     *
      * @return string $descr
      */
     public function getDescr()
@@ -139,7 +146,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the descr
-     * 
+     *
      * @param string $descr
      * @return void
      */
@@ -150,7 +157,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the tasks
-     * 
+     *
      * @return string $tasks
      */
     public function getTasks()
@@ -160,7 +167,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the tasks
-     * 
+     *
      * @param string $tasks
      * @return void
      */
@@ -171,7 +178,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the qualification
-     * 
+     *
      * @return string $qualification
      */
     public function getQualification()
@@ -181,7 +188,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the qualification
-     * 
+     *
      * @param string $qualification
      * @return void
      */
@@ -192,7 +199,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the refid
-     * 
+     *
      * @return string $refid
      */
     public function getRefid()
@@ -202,7 +209,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the refid
-     * 
+     *
      * @param string $refid
      * @return void
      */
@@ -213,7 +220,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the contactname
-     * 
+     *
      * @return string $contactname
      */
     public function getContactname()
@@ -223,7 +230,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the contactname
-     * 
+     *
      * @param string $contactname
      * @return void
      */
@@ -234,7 +241,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the contactaddress
-     * 
+     *
      * @return string $contactaddress
      */
     public function getContactaddress()
@@ -244,7 +251,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the contactaddress
-     * 
+     *
      * @param string $contactaddress
      * @return void
      */
@@ -255,7 +262,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the contacttel
-     * 
+     *
      * @return string $contacttel
      */
     public function getContacttel()
@@ -265,7 +272,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the contacttel
-     * 
+     *
      * @param string $contacttel
      * @return void
      */
@@ -276,7 +283,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the contactmail
-     * 
+     *
      * @return string $contactmail
      */
     public function getContactmail()
@@ -286,7 +293,7 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the contactmail
-     * 
+     *
      * @param string $contactmail
      * @return void
      */
