@@ -16,8 +16,8 @@
 			<f:for each="{jobOffers}" as="jobOffer">
 				<tr>
 					<td><f:link.action action="show" arguments="{jobOffer:jobOffer}"><f:format.html>{jobOffer.title}</f:format.html></f:link.action></td>
-					<td><f:link.action action="show" arguments="{jobOffer:jobOffer}">><f:format.html>{jobOffer.descr}</f:format.html></f:link.action></td>
-					<td><f:link.action action="show" arguments="{jobOffer:jobOffer}"> ><f:format.html>{jobOffer.refid}</f:format.html></f:link.action></td>
+					<td><f:link.action action="show" arguments="{jobOffer:jobOffer}"><f:format.html>{jobOffer.descr}</f:format.html></f:link.action></td>
+					<td><f:link.action action="show" arguments="{jobOffer:jobOffer}"><f:format.html>{jobOffer.refid}</f:format.html></f:link.action></td>
 					<!--<td><f:link.action action="edit" arguments="{jobOffer : jobOffer}">Edit</f:link.action></td>
 					<td><f:link.action action="delete" arguments="{jobOffer : jobOffer}">Delete</f:link.action></td>-->
 				</tr>
