@@ -7,12 +7,12 @@
  */
 
 namespace Tp3\Tp3Jobs\Tests\Unit\Controller;
-
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 /**
  * Test case.
  *
  */
-class JobOfferControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class JobOfferControllerTest extends UnitTestCase
 {
     /**
      * @var \Tp3\Tp3Jobs\Controller\JobOfferController
