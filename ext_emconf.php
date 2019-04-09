@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = [
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 0,
-  'version' => '1.2.3',
+  'version' => '1.2.4',
   'author_company' => 'tp3',
   'constraints' =>
   [
