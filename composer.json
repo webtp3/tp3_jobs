@@ -13,8 +13,9 @@
     }
   },
   "replace": {
+    "tp3_jobs": "self.version",
     "typo3-ter/tp3_jobs": "self.version",
-    "web-tp3/tp3jobs": "self.version"
+    "web-tp3/tp3_jobs": "self.version"
   },
   "autoload-dev": {
     "psr-4": {
