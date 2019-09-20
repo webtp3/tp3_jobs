@@ -214,7 +214,7 @@ return [
         ],
         'jobaddress' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:tp3mods/Resources/Private/Language/locallang_db.xlf:tx_tp3mods_domain_model_tp3mods.address',
+            'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.address',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
