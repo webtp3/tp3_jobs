@@ -19,6 +19,8 @@ namespace Tp3\Tp3Jobs\Domain\Model;
  *
  ***/
 
+use FriendsOfTYPO3\TtAddress\Domain\Model\Address;
+
 /**
  * JobOffer
  */
@@ -31,6 +33,12 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $title = '';
 
+    /**
+     * address
+     *
+     * @var \FriendsOfTYPO3\TtAddress\Domain\Model\Address
+     */
+    protected $jobaddress = '';
     /**
      * descr
      *
@@ -301,4 +309,25 @@ class JobOffer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->contactmail = $contactmail;
     }
+    /**
+     * Returns the address
+     *
+     * @return Address $address
+     */
+    public function getAddress() : Address
+    {
+        return $this->jobaddress;
+    }
+
+    /**
+     * Sets the address
+     *
+     * @param Address $address
+     * @return void
+     */
+    public function setAddress(Address $jobaddress)
+    {
+        $this->jobaddress = $jobaddress;
+    }
 }
+

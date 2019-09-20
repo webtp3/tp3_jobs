@@ -15,6 +15,7 @@ CREATE TABLE tx_tp3jobs_domain_model_joboffer (
 	contactaddress varchar(255) DEFAULT '' NOT NULL,
 	contacttel varchar(255) DEFAULT '' NOT NULL,
 	contactmail varchar(255) DEFAULT '' NOT NULL,
+    jobaddress int(255) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -41,6 +42,7 @@ CREATE TABLE tx_tp3jobs_domain_model_joboffer (
 	PRIMARY KEY (uid),
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
+	KEY address (jobaddress),
 	KEY language (l10n_parent,sys_language_uid)
 
 );

@@ -2,7 +2,7 @@
 [![Latest Stable Version](https://poser.pugx.org/web-tp3/tp3jobs/v/stable)](https://packagist.org/packages/web-tp3/tp3jobs)
 [![Daily Downloads](https://poser.pugx.org/web-tp3/tp3jobs/d/daily)](https://packagist.org/packages/web-tp3/tp3jobs)
 [![Total Downloads](https://poser.pugx.org/web-tp3/tp3jobs/downloads)](https://packagist.org/packages/web-tp3/tp3jobs)
-[![License](https://poser.pugx.org/web-tp3/tp3jobs/license)](https://packagist.org/packages/web-tp3/tp3jobs)
+[![License](https://poser.pugx.org/web-tp3/tp3_jobs/license)](https://packagist.org/packages/web-tp3/tp3_jobs)
 
 Display Jobs on you site. Microdate for the searchangines and compatibility 
 

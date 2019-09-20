@@ -212,6 +212,18 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'jobaddress' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:tp3mods/Resources/Private/Language/locallang_db.xlf:tx_tp3mods_domain_model_tp3mods.address',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tt_address',
+                'foreign_table_where' => 'ORDER BY tt_address.name ',
+                'minitems' => 0,
+                'maxitems' => 1,
+            ],
+        ],
         'tstamp' => [
             'exclude' => true,
             'label' => 'LLL:EXT:tp3_jobs/Resources/Private/Language/locallang_db.xlf:tx_tp3jobs_domain_model_joboffer.contactmail',
